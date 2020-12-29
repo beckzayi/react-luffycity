@@ -1,0 +1,27 @@
+{
+  "name": "react-luffycity",
+  "version": "1.0.0",
+  "description": "Build react from scratch",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beckzayi/react-luffycity.git"
+  },
+  "keywords": ["react"],
+  "author": "Darren Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beckzayi/react-luffycity/issues"
+  },
+  "homepage": "https://github.com/beckzayi/react-luffycity#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "parcel-bundler": "^1.12.4"
+  }
+}
