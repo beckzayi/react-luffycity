@@ -4,9 +4,9 @@ const React = {
 
 /**
  * Returns a React element object.
- * @param {string} tag 
- * @param {Object} attrs 
- * @param  {Array} children 
+ * @param {string} tag - the dom tag, such div, and span etc
+ * @param {Object} attrs - it is an object with properties
+ * @param  {Array} children - an array
  * @returns {Object}
  */
 function createElement(tag, attrs, ...children) {
