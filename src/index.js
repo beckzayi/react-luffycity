@@ -8,4 +8,10 @@ const ele = (
     </div>
 );
 
-ReactDOM.render(ele, document.querySelector('#root'));
+function Home(props) {
+    return(
+        <h1 className="title">Home, hi <span>{props.name}</span></h1>
+    )
+}
+
+ReactDOM.render(<Home name="John" />, document.querySelector('#root'));

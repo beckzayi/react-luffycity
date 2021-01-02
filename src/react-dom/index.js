@@ -8,6 +8,7 @@ const ReactDOM = {
  * @param {HTMLElement} container - the dom.
  */
 function render(vnode, container) {
+    console.log(vnode);
     if (vnode === undefined) {
         return;
     }
@@ -35,6 +36,12 @@ function render(vnode, container) {
         });
 
         return container.appendChild(dom);
+    }
+
+    if (typeof tag === 'function') {
+        const functionComponent = tag(attrs);
+        console.log(functionComponent);
+        return functionComponent;
     }
 }
 /**
