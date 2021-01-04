@@ -14,4 +14,21 @@ function Home(props) {
     )
 }
 
-ReactDOM.render(<Home name="John" />, document.querySelector('#root'));
+class Person extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return(
+            <div>
+                <div className="name">Hello {this.props.name}</div>
+                <div className="age">
+                    <label>Age:</label>
+                    <span>{this.props.age}</span>
+                </div>
+            </div>
+        );
+    }
+}
+
+ReactDOM.render(<Person name="Kate" age="18" />, document.querySelector('#root'));

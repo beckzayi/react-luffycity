@@ -1,3 +1,5 @@
+import { isClassComponent } from '../utils';
+
 const ReactDOM = {
     render
 };
@@ -8,7 +10,6 @@ const ReactDOM = {
  * @param {HTMLElement} container - the dom.
  */
 function render(vnode, container) {
-    console.log(vnode);
     if (vnode === undefined) {
         return;
     }
@@ -39,8 +40,14 @@ function render(vnode, container) {
     }
 
     if (typeof tag === 'function') {
-        const functionComponent = tag(attrs);
-        return render(functionComponent, container);
+        if (isClassComponent(tag)) {
+            const classComponent = new tag(attrs);
+            const classVNode = classComponent.render();
+            return render(classVNode, container);
+        } else {
+            const functionComponent = tag(attrs);
+            return render(functionComponent, container);
+        }
     }
 }
 /**
