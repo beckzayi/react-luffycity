@@ -40,8 +40,7 @@ function render(vnode, container) {
 
     if (typeof tag === 'function') {
         const functionComponent = tag(attrs);
-        console.log(functionComponent);
-        return functionComponent;
+        return render(functionComponent, container);
     }
 }
 /**
